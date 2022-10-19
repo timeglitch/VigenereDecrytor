@@ -51,7 +51,7 @@ def affinesolve(blocksize: int, cyphertext: input):
             #print(c)
             #print(i)
             out[i + blocksize * c] = temp[c]
-    print(str(out))
+    #print(str(out))
     sout = ""
     for c in out:
         sout = sout + c
@@ -60,6 +60,7 @@ def affinesolve(blocksize: int, cyphertext: input):
 repeatedvals = (repeatfinder(5, ctext))
 print(str(repeatedvals))
 valindices = kasiskicounter(ctext, list(repeatedvals.keys()))
+print("Index differences of repeated occurrences: ")
 print(str(valindices))
 blocksize = int(input("Input Probable Block Size: "))
 #for i in range(1,151):
